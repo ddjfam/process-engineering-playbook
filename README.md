@@ -97,8 +97,10 @@ process-engineering-playbook/
 ├── metrics-and-operational-performance.md
 ├── implementation-and-change-planning.md
 └── images/
-    └── cover3.png
-Key Themes
+    └── cover.png
+'''
+
+##Key Themes
 Process engineering
 Lean Six Sigma thinking
 Business process improvement
@@ -107,11 +109,11 @@ Controls and risk alignment
 Stakeholder facilitation
 KPI/KRI development
 Enterprise transformation
-Confidentiality Note
+##Confidentiality Note
 
 All content in this repository is anonymized and intended for portfolio use. Any examples are adapted to avoid sharing proprietary, confidential, or sensitive business information.
 
-About Me
+##About Me
 
 I build and support products and operations at the intersection of:
 
@@ -123,6 +125,6 @@ enterprise transformation
 
 My background includes experience in banking, insurance, consulting, and military operations, with a focus on process redesign, workflow improvement, operational controls, and cross-functional delivery.
 
-Connect
+##Connect
 LinkedIn: https://www.linkedin.com/in/christopher-d-cole/
 Location: San Antonio, Texas
