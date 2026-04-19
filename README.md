@@ -1,5 +1,7 @@
 # Process Engineering Playbook
 
+![Process Engineering Playbook cover](images/cover.png)
+
 Portfolio repository highlighting process engineering, continuous improvement, workflow analysis, and operational excellence methods used in complex enterprise environments.
 
 ## Overview
