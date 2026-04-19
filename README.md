@@ -97,7 +97,7 @@ process-engineering-playbook/
 ├── metrics-and-operational-performance.md
 ├── implementation-and-change-planning.md
 └── images/
-    └── cover.png
+    └── cover3.png
 Key Themes
 Process engineering
 Lean Six Sigma thinking
