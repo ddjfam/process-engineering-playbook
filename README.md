@@ -28,6 +28,16 @@ Organizations often struggle with fragmented workflows, unclear ownership, incon
 
 This repository shows how I would structure and communicate process engineering work through practical portfolio artifacts.
 
+## Representative Improvement Outcomes
+
+Examples of process and workflow outcomes reflected in this portfolio include:
+
+- Increased productivity by 35% through redesign of 25 process maps with more than 600 steps.
+- Resolved issues across 33 regions through process analysis and redesign.
+- Reduced 13 non-value activities and improved customer satisfaction by 30% in healthcare operations.
+- Saved $180K through redesign of 26 training phases.
+- Improved learner satisfaction by 87% through curriculum redesign and content modernization.
+
 ## Focus Areas
 
 - process mapping and workflow analysis
