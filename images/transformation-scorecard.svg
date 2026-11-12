@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="title desc">
+<title id="title">Synthetic transformation scorecard</title>
+<desc id="desc">Fictional insurance service workflow. Mean elapsed time 24 to 12 hours; handling time 20 to 12 minutes; rework 18 to 7 percent; SLA 70 to 90 percent; satisfaction 78 to 86 percent. Capacity model: 800 usable hours monthly, 345600 dollars annual capacity value and 129600 dollars first-year net capacity value equivalent. Capacity is not cash savings.</desc>
+<rect width="1200" height="650" rx="18" fill="#f3f6fa"/>
+<rect width="1200" height="140" rx="18" fill="#132b45"/>
+<rect y="120" width="1200" height="20" fill="#132b45"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="34" y="40" fill="#8de2d3" font-size="15" font-weight="700" letter-spacing="2">SYNTHETIC PORTFOLIO EXAMPLE</text>
+<text x="34" y="79" fill="white" font-size="30" font-weight="700">Service performance → measurable capacity</text>
+<text x="34" y="112" fill="#d2deeb" font-size="16">Two fictional 30-day periods · 10,000 completed requests per period · Comparable case mix assumed</text>
+<rect x="30" y="165" width="220" height="180" rx="10" fill="white" stroke="#dce4ed"/>
+<text x="46" y="196" fill="#40536b" font-size="16" font-weight="700">Elapsed completion</text>
+<text x="46" y="239" fill="#142d47" font-size="29" font-weight="700">24h → 12h</text>
+<text x="46" y="277" fill="#006e60" font-size="18" font-weight="700">50% lower</text>
+<text x="46" y="315" fill="#54677c" font-size="12.5">Mean elapsed time</text>
+<rect x="264" y="165" width="220" height="180" rx="10" fill="white" stroke="#dce4ed"/>
+<text x="280" y="196" fill="#40536b" font-size="16" font-weight="700">Handling time</text>
+<text x="280" y="239" fill="#142d47" font-size="29" font-weight="700">20m → 12m</text>
+<text x="280" y="277" fill="#006e60" font-size="18" font-weight="700">40% lower</text>
+<text x="280" y="315" fill="#54677c" font-size="12.5">Active work per request</text>
+<rect x="498" y="165" width="220" height="180" rx="10" fill="white" stroke="#dce4ed"/>
+<text x="514" y="196" fill="#40536b" font-size="16" font-weight="700">Rework</text>
+<text x="514" y="239" fill="#142d47" font-size="29" font-weight="700">18% → 7%</text>
+<text x="514" y="277" fill="#006e60" font-size="18" font-weight="700">11 pts lower</text>
+<text x="514" y="315" fill="#54677c" font-size="12.5">1,800 → 700 requests</text>
+<rect x="732" y="165" width="220" height="180" rx="10" fill="white" stroke="#dce4ed"/>
+<text x="748" y="196" fill="#40536b" font-size="16" font-weight="700">Within SLA</text>
+<text x="748" y="239" fill="#142d47" font-size="29" font-weight="700">70% → 90%</text>
+<text x="748" y="277" fill="#006e60" font-size="18" font-weight="700">20 pts higher</text>
+<text x="748" y="315" fill="#54677c" font-size="12.5">7,000 → 9,000 requests</text>
+<rect x="966" y="165" width="220" height="180" rx="10" fill="white" stroke="#dce4ed"/>
+<text x="982" y="196" fill="#40536b" font-size="16" font-weight="700">Customer satisfaction</text>
+<text x="982" y="239" fill="#142d47" font-size="29" font-weight="700">78% → 86%</text>
+<text x="982" y="277" fill="#006e60" font-size="18" font-weight="700">8 pts higher</text>
+<text x="982" y="315" fill="#54677c" font-size="12.5">156/200 → 172/200 favorable</text>
+<text x="34" y="383" fill="#142d47" font-size="20" font-weight="700">Capacity business case · modeled at a full-year run rate</text>
+<rect x="30" y="405" width="1140" height="108" rx="10" fill="#e2f2ee"/>
+<text x="52" y="443" fill="#006759" font-size="28" font-weight="700">800 hours / month</text>
+<text x="52" y="479" fill="#304c58" font-size="15">Usable capacity after adoption and realization</text>
+<text x="450" y="443" fill="#006759" font-size="28" font-weight="700">$345,600 / year</text>
+<text x="450" y="479" fill="#304c58" font-size="15">Gross capacity value at $36 / hour</text>
+<text x="842" y="443" fill="#006759" font-size="28" font-weight="700">$129,600</text>
+<text x="842" y="479" fill="#304c58" font-size="15">First-year net capacity value equivalent</text>
+<text x="34" y="547" fill="#40536b" font-size="15">Assumptions: 75% adoption · 80% capacity realization · $96K annual recurring cost · $120K one-time cost</text>
+<text x="34" y="579" fill="#142d47" font-size="16" font-weight="700">Capacity value is not cash savings. Finance must validate any expense reduction.</text>
+<text x="34" y="612" fill="#54677c" font-size="14">Illustrative values only; not Confie or employer results. Reproduce using the linked JSON inputs and Python calculator.</text>
+</g></svg>

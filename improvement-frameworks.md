@@ -1,84 +1,34 @@
-# Improvement Frameworks
+# Structured Discovery, Value Stream Mapping and Future-State Design
 
-## Overview
+**Reusable delivery method | Lean Six Sigma Master Black Belt practice**
 
-Process improvement works best when teams use structured methods to understand problems, analyze causes, prioritize actions, and measure outcomes. This document outlines example frameworks that can support enterprise process engineering work.
+| Stage | Work to perform | Evidence / deliverable |
+|---|---|---|
+| Define | Agree customer outcome, problem, scope, owner and boundaries using SIPOC | Charter and baseline measurement plan |
+| Measure | Observe actual work and map the value stream across teams and systems | Current-state map with volumes, touch time, waiting time, rework and queues |
+| Analyze | Use Pareto analysis, 5 Whys and cause-and-effect analysis; test hypotheses against transaction evidence | Validated causes, waste, control gaps and opportunity sizing |
+| Improve | Compare simplification, policy, training, workflow and RPA options | Future-state BPMN, decision rules, controls, owner responsibilities and pilot requirements |
+| Control | Pilot, validate results, transfer ownership and monitor recurrence | Control plan, benefit tracker, adoption measures and review dates |
 
-## Common Improvement Frameworks
+## Minimum value stream map
 
-### 1. Current-State / Future-State Mapping
+For each step record the trigger, input, owner, system, processing time, queue time, output and failure path. Separate **elapsed customer time** from **staff touch time**; they measure different problems. Include cross-location handoffs and work performed outside the main system.
 
-This method helps teams document how work happens today and how it should work after improvement.
+## Synthetic example: finding the right intervention
 
-**Use cases**
-- identifying manual steps
-- surfacing bottlenecks
-- clarifying ownership
-- designing improved flow
+A request takes 24 elapsed hours but only 20 minutes of staff handling. Faster data entry alone will not remove most of the elapsed delay. Check queue ownership, missing inputs, approval waits and batching before choosing a solution. These figures belong to the [synthetic measurement example](metrics-and-operational-performance.md).
 
-### 2. Root-Cause Analysis
+## Future-state design checklist
 
-This method helps teams move beyond symptoms and identify the underlying causes of repeated issues.
+- One accountable process owner, with named owners at each handoff.
+- Required inputs and acceptance criteria at entry and exit.
+- Business rules, decision points and segregation of duties.
+- Service targets with defined clock start, pause and stop rules.
+- Exception routing, escalation thresholds and recovery paths.
+- Preventive and detective controls with evidence retained.
+- Technology requirements, acceptance tests and adoption plan.
+- Baseline, target, reporting cadence and benefits owner.
 
-**Example tools**
-- 5 Whys
-- cause-and-effect analysis
-- pattern review
-- issue categorization
+Automate only after confirming which work should remain, which rules are stable and where people must retain judgment.
 
-### 3. Lean Thinking
-
-Lean methods help identify waste and improve flow.
-
-**Common waste areas**
-- delays
-- rework
-- handoff friction
-- unnecessary approvals
-- duplicate effort
-
-### 4. Six Sigma Thinking
-
-Six Sigma methods support reduction of variation and improvement of process consistency and quality.
-
-**Example uses**
-- identifying defect patterns
-- improving repeatability
-- standardizing process inputs and outputs
-- strengthening measurement discipline
-
-### 5. SIPOC Framing
-
-SIPOC helps teams define suppliers, inputs, process steps, outputs, and customers.
-
-**Why it matters**
-- creates shared understanding
-- clarifies scope
-- improves process framing before deeper analysis
-
-### 6. Prioritization Frameworks
-
-Not all process issues should be addressed at once.
-
-**Example prioritization criteria**
-- business impact
-- effort
-- urgency
-- risk
-- stakeholder demand
-- dependency level
-
-## Practical Improvement Principles
-
-Effective process improvement should:
-
-- start with a clearly defined problem
-- use structured analysis rather than assumptions
-- focus on the highest-value friction points
-- balance speed, controls, and usability
-- define measurable outcomes
-- support realistic implementation
-
-## Summary
-
-Frameworks are useful because they create discipline in how teams analyze, improve, and sustain process changes. The right method depends on the problem, the environment, and the level of change needed.
+[Booz Allen experience](case-studies/structured-discovery.md) · [Controls by design](controls-and-risk-thinking.md) · [Workflow specification](https://github.com/ddjfam/servicenow-workflow-automation/blob/main/end-to-end-workflow-example.md)

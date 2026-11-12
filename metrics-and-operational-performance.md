@@ -1,125 +1,80 @@
-# Controls and Risk Thinking
+# Operational Performance and Benefits Realization
 
-## Overview
+**Reusable measurement guide with a synthetic insurance-service example.**
 
-Effective process engineering should improve efficiency without weakening control effectiveness. In enterprise environments, process changes must account for operational risk, ownership, compliance expectations, and decision traceability.
+Use data to expose leakage, select the intervention and verify the result. A dashboard should tell an owner what changed, why it matters and what decision is needed.
 
-This document outlines how controls and risk thinking can be integrated into process analysis and improvement planning.
+## Define the baseline before the business case
 
-## Why Controls Matter
+Agree the start/end events, unit of work, population, exclusions, measurement period and accountable owner. Reconcile volumes to the source. Segment by location, channel and request type so a change in case mix does not look like an improvement.
 
-A process can be fast and still fail if it lacks:
+| Measure | Definition | Decision it supports |
+|---|---|---|
+| Elapsed cycle time | Completion timestamp minus accepted-intake timestamp; show median and p90 in a live deployment | Find queues and long-tail delays |
+| Handling time | Total active work minutes / completed requests | Find manual effort and estimate capacity |
+| Rework rate | Completed requests requiring correction / all completed requests | Identify defects and upstream causes |
+| SLA attainment | In-scope requests completed within the agreed SLA / all in-scope completed requests | Focus on missed commitments |
+| Customer satisfaction | Favorable survey responses / valid responses; show sample size and response rate | Check whether customers benefit |
+| Adoption | Eligible transactions using the new workflow / all eligible transactions | Explain the gap between pilot and scaled value |
+| Benefits realized | Observed incremental benefit accepted by the accountable owner and Finance | Decide whether to scale or adjust |
 
-- clear ownership
-- required approvals
-- decision traceability
-- consistent handoffs
-- documented exceptions
-- visibility into breakdowns
+## Synthetic scorecard
 
-Strong process design balances speed, usability, and control discipline.
+The example compares two fictional 30-day periods, each with 10,000 completed requests. Case mix is assumed comparable. Cycle time here is a **mean** because the sample contains aggregate inputs; a real deployment should also show the distribution. Each synthetic survey has 200 valid responses.
 
-## Common Process Risks
+![Synthetic transformation scorecard](images/transformation-scorecard.svg)
 
-Examples of process-related risks include:
+| Measure | Baseline | Redesigned process | Change |
+|---|---:|---:|---:|
+| Mean elapsed completion time | 24 hours | 12 hours | 50% lower |
+| Mean handling time | 20 minutes | 12 minutes | 40% lower |
+| Rework rate | 18% | 7% | 11 percentage points lower |
+| SLA attainment | 70% | 90% | 20 percentage points higher |
+| Favorable survey responses | 78% (156/200) | 86% (172/200) | 8 percentage points higher |
 
-- unclear ownership across workflow stages
-- missed or inconsistent approvals
-- incomplete or poor-quality intake data
-- manual workarounds outside the intended process
-- delayed escalation of blocked items
-- limited visibility into bottlenecks
-- inconsistent execution across teams
+These are illustrative values, not Confie or employer results. The small aggregate sample demonstrates calculations, not statistical significance or causation.
 
-## Control Design Principles
+## Capacity model and financial treatment
 
-Strong control thinking in process engineering includes:
+The [JSON inputs](examples/benefits-inputs.json) and [Python calculator](examples/benefits-calculator.py) make the assumptions reproducible:
 
-1. defining who owns each major step
-2. clarifying required approvals and decision points
-3. reducing ambiguity in handoffs
-4. making status and exceptions visible
-5. capturing the minimum necessary information to support traceability
-6. designing controls that support execution rather than slow it unnecessarily
+```text
+Gross hours released / month = 10,000 requests × (20 − 12) minutes / 60
+                            = 1,333.33 hours
+Adoption-adjusted hours     = 1,333.33 × 75% = 1,000 hours
+Usable capacity             = 1,000 × 80% = 800 hours / month
+Capacity value              = 800 × $36 loaded hourly cost = $28,800 / month
+Annual capacity value       = $345,600
+Annual recurring cost       = $96,000
+One-time implementation     = $120,000
+First-year net capacity value equivalent = $129,600
+```
 
-## Examples of Useful Controls
+This annual model assumes 12 months at the stated run rate; it does not include a ramp-up period. Adoption represents eligible volume using the workflow. The realization factor represents how much released time can be consolidated and put to productive use. Avoid applying either discount twice.
 
-### 1. Ownership Controls
-Ensure each process stage has a clear owner or responsible team.
+**Capacity value is not cash savings.** Finance would need an approved staffing, overtime or other expense action before recognizing a cash reduction. Do not add rework savings again when they are already included in the handling-time reduction. Customer, quality and control outcomes remain separate measures unless a defensible valuation is agreed.
 
-**Why it matters**
-- improves accountability
-- reduces confusion
-- supports faster resolution of delays
+Run from the repository root with Python 3:
 
-### 2. Intake Controls
-Require key information at the start of the process.
+```bash
+python examples/benefits-calculator.py
+```
 
-**Why it matters**
-- improves data quality
-- reduces rework
-- supports better routing and prioritization
+## Implementation in reporting tools
 
-### 3. Approval Controls
-Define where approval or review is required.
+| Tool | Practical use | Control |
+|---|---|---|
+| Power BI | Transaction and event tables, common measures, location/process drill-downs | Reconcile totals; document refresh date and metric owner |
+| Tableau | Distribution, bottleneck and customer-outcome views | Use the same definitions and filters as the approved baseline |
+| Excel | Assumptions, scenarios and Finance review | Separate inputs from formulas; version assumptions and approvals |
+| SaaS workflow reporting | Queue, exception, SLA and adoption measures | Validate event timestamps and status definitions |
 
-**Why it matters**
-- protects decision quality
-- supports compliance expectations
-- reduces inconsistent execution
+This repository contains a portable JSON/Python/SVG demonstration; the table describes how to implement the same measurement design in reporting platforms.
 
-### 4. Status and Exception Controls
-Make delays, blocked items, and exceptions visible.
+## Benefits register and governance
 
-**Why it matters**
-- supports follow-up
-- improves transparency
-- reduces hidden process failure points
+Track: initiative; sponsor; baseline date; metric definition; baseline; target; approved forecast; observed result; benefit category; costs; dependencies; owner; evidence; Finance acceptance; next review.
 
-### 5. Documentation and Traceability Controls
-Capture important decisions, changes, and outcomes.
+Review leading indicators weekly during a pilot, operational performance after launch and accepted benefits monthly. Close an initiative only when the process owner has a monitoring routine, escalation triggers and responsibility for corrective action.
 
-**Why it matters**
-- improves auditability
-- supports knowledge transfer
-- makes process outcomes easier to explain
-
-## Process Engineering Questions
-
-When evaluating a process, useful questions include:
-
-- Where is ownership unclear?
-- Which steps rely too heavily on manual follow-up?
-- Which decisions are not documented well?
-- Where are controls weak, duplicated, or overly burdensome?
-- Which parts of the process create the highest operational risk?
-- How can control effectiveness be improved without adding unnecessary friction?
-
-## Risk-Based Improvement Thinking
-
-Not every issue has the same impact. A practical process engineer should evaluate:
-
-- operational severity
-- frequency of occurrence
-- stakeholder impact
-- ease of detection
-- implementation effort
-- dependency on other teams or systems
-
-This helps prioritize the right improvement opportunities first.
-
-## Balance Principle
-
-The goal is not maximum control at every step. The goal is the right level of control for the risk, complexity, and business need involved.
-
-Well-designed processes should be:
-
-- controlled
-- understandable
-- scalable
-- practical to execute
-- measurable over time
-
-## Summary
-
-Controls and risk thinking strengthen process engineering by making improvements more sustainable, accountable, and reliable. Good process design does not treat controls as separate from workflow design—they are part of it.
+[Executive decision brief](executive-decision-brief.md) · [Intake and prioritization](intake-and-prioritization.md) · [Experience measurement notes](evidence-and-measurement.md)

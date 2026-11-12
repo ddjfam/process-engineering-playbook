@@ -1,141 +1,41 @@
-# Process Engineering Playbook
+# Enterprise Reengineering & CoE Playbook
 
-![Process Engineering Playbook cover](images/cover3.png)
+**Christopher D. Cole | Lean Six Sigma Master Black Belt**
 
-Portfolio repository highlighting process engineering, continuous improvement, workflow analysis, and operational excellence methods used in complex enterprise environments.
+I lead process redesign and help build the methods, ownership and measurement discipline that make transformation repeatable across business units. This portfolio combines experience from banking, insurance and consulting with practical tools for establishing a Reengineering Center of Excellence.
 
-## Overview
+## Selected experience
 
-This repository presents an anonymized portfolio of process engineering artifacts and methods relevant to business transformation, operational improvement, and workflow redesign. It demonstrates how I approach process analysis, root-cause identification, controls thinking, stakeholder alignment, and improvement planning.
+| Engagement | My accountability | Reported outcome |
+|---|---|---|
+| [USAA enterprise redesign](case-studies/usaa-enterprise-reengineering.md) | Process engineering; leader alignment; requirements, controls and adoption | **25 processes / 600+ steps; 35% productivity improvement; issues resolved across 33 regions** |
+| [Wells Fargo process architecture](case-studies/rcsa-process-architecture.md) | Group Process Architect; common modeling approach; BPMN training | **120 RCSA service models delivered** |
+| [Booz Allen structured discovery](case-studies/structured-discovery.md) | Facilitated discovery and translated findings into implementation priorities | **62 process gaps closed across six initiatives** |
 
-This repository is intended to demonstrate how I think and work as a:
+## CoE toolkit
 
-- Process Engineer
-- Product Owner
-- AI Product Manager
+| Executive question | Start here |
+|---|---|
+| What does the CoE own, and how is it staffed? | [Charter, team model and decision rights](coe-charter-and-governance.md) |
+| What would I establish in the first 90 days? | [90-day launch plan](90-day-launch-plan.md) |
+| Which problems should we tackle first? | [Intake and prioritization](intake-and-prioritization.md) |
+| How do we find leakage and design the future state? | [Structured discovery and VSM](improvement-frameworks.md) |
+| How will we prove financial and customer value? | [Metrics, dashboard and benefits model](metrics-and-operational-performance.md) |
+| What decision does an executive need to make? | [One-page executive decision brief](executive-decision-brief.md) |
+| How do controls and adoption survive implementation? | [Controls by design](controls-and-risk-thinking.md) · [Implementation and change](implementation-and-change-planning.md) |
 
-## Quick Links
+## Measurement example
 
-- [Process Overview](process-overview.md)
-- [Improvement Frameworks](improvement-frameworks.md)
-- [Controls and Risk Thinking](controls-and-risk-thinking.md)
-- [Metrics and Operational Performance](metrics-and-operational-performance.md)
-- [Implementation and Change Planning](implementation-and-change-planning.md)
+The dashboard below uses **synthetic insurance-service data** to demonstrate the link between process performance, customer experience and capacity. It is a portfolio example, not a result from Confie or any employer.
 
-## Context
+![Synthetic process performance and benefits dashboard](images/transformation-scorecard.svg)
 
-Organizations often struggle with fragmented workflows, unclear ownership, inconsistent controls, process variation, and limited operational visibility. Process engineering helps teams define current-state issues, identify root causes, design improved workflows, and support more effective execution.
+The [measurement guide](metrics-and-operational-performance.md) defines every metric and separates capacity value from cash savings. Reproduce the calculations using the [sample inputs](examples/benefits-inputs.json) and [calculator](examples/benefits-calculator.py).
 
-This repository shows how I would structure and communicate process engineering work through practical portfolio artifacts.
+## Operating approach
 
-## Representative Improvement Outcomes
+Agree the business outcome, baseline the end-to-end process, verify root causes, choose the intervention, implement with owners and controls, then validate benefits and sustain performance. Shared standards support local execution; exceptions need a reason, an owner and a review date.
 
-Examples of process and workflow outcomes reflected in this portfolio include:
+**Portfolio status:** Case studies summarize experience. CoE documents and examples are proposed reusable tools. [Evidence and measurement notes](evidence-and-measurement.md) explain the boundaries of each claim.
 
-- Increased productivity by 35% through redesign of 25 process maps with more than 600 steps.
-- Resolved issues across 33 regions through process analysis and redesign.
-- Reduced 13 non-value activities and improved customer satisfaction by 30% in healthcare operations.
-- Saved $180K through redesign of 26 training phases.
-- Improved learner satisfaction by 87% through curriculum redesign and content modernization.
-
-## Focus Areas
-
-- process mapping and workflow analysis
-- continuous improvement
-- operational excellence
-- controls and risk thinking
-- KPI/KRI framing
-- stakeholder facilitation
-- root-cause analysis
-- implementation planning
-
-## Example Problem Space
-
-Teams may face long cycle times, rework, inconsistent handoffs, unclear roles, poor metrics visibility, and limited standardization. Effective process engineering addresses these issues by improving clarity, reducing friction, and supporting scalable operations.
-
-## My Role
-
-In this portfolio example, I demonstrate how I would contribute across:
-
-- current-state and future-state process analysis
-- workflow mapping and redesign
-- root-cause analysis
-- controls and operational risk thinking
-- continuous improvement planning
-- stakeholder workshops and alignment
-- metrics definition and performance review
-- implementation and change support
-
-## What This Repository Includes
-
-- process overview and business context
-- improvement frameworks and analysis methods
-- controls and risk-thinking examples
-- operational metrics and performance measures
-- implementation and change-planning artifacts
-
-## Process Engineering Approach
-
-My approach to process engineering includes:
-
-1. Understanding the current-state process before proposing changes
-2. Identifying bottlenecks, waste, risks, and handoff failures
-3. Balancing efficiency, controls, and user experience
-4. Using structured frameworks to guide analysis and prioritization
-5. Aligning stakeholders around measurable improvements
-6. Supporting execution through practical implementation planning
-
-## Example Deliverables
-
-This repository includes documents such as:
-
-- `process-overview.md`
-- `improvement-frameworks.md`
-- `controls-and-risk-thinking.md`
-- `metrics-and-operational-performance.md`
-- `implementation-and-change-planning.md`
-
-## Repository Structure
-
-```text
-process-engineering-playbook/
-│
-├── README.md
-├── process-overview.md
-├── improvement-frameworks.md
-├── controls-and-risk-thinking.md
-├── metrics-and-operational-performance.md
-├── implementation-and-change-planning.md
-└── images/
-    └── cover.png
-```
-
-## Key Themes
-
-Process engineering
-Lean Six Sigma thinking
-Business process improvement
-Operational excellence
-Controls and risk alignment
-Stakeholder facilitation
-KPI/KRI development
-Enterprise transformation
-## Confidentiality Note
-
-All content in this repository is anonymized and intended for portfolio use. Any examples are adapted to avoid sharing proprietary, confidential, or sensitive business information.
-
-## About Me
-
-I build and support products and operations at the intersection of:
-
-process engineering
-workflow automation
-product ownership
-AI/ML product strategy
-enterprise transformation
-
-My background includes experience in banking, insurance, consulting, and military operations, with a focus on process redesign, workflow improvement, operational controls, and cross-functional delivery.
-
-## Connect
-LinkedIn: https://www.linkedin.com/in/christopher-d-cole/
-Location: San Antonio, Texas
+[Profile](https://github.com/ddjfam) · [Enterprise AI enablement](https://github.com/ddjfam/agentic-ai-automation-playbook) · [Workflow automation](https://github.com/ddjfam/servicenow-workflow-automation)

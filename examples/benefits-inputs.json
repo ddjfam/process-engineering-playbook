@@ -1,0 +1,31 @@
+{
+  "status": "Synthetic portfolio example; not Confie or employer results",
+  "period_days": 30,
+  "baseline": {
+    "completed_requests": 10000,
+    "mean_elapsed_hours": 24,
+    "handling_minutes": 20,
+    "rework_requests": 1800,
+    "within_sla_requests": 7000,
+    "favorable_survey_responses": 156,
+    "valid_survey_responses": 200
+  },
+  "redesigned": {
+    "completed_requests": 10000,
+    "mean_elapsed_hours": 12,
+    "handling_minutes": 12,
+    "rework_requests": 700,
+    "within_sla_requests": 9000,
+    "favorable_survey_responses": 172,
+    "valid_survey_responses": 200
+  },
+  "benefit_assumptions": {
+    "monthly_volume": 10000,
+    "loaded_hourly_cost_usd": 36,
+    "adoption_rate": 0.75,
+    "capacity_realization_rate": 0.8,
+    "recurring_monthly_cost_usd": 8000,
+    "one_time_implementation_cost_usd": 120000,
+    "run_rate_months": 12
+  }
+}

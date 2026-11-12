@@ -1,125 +1,25 @@
-# Controls and Risk Thinking
+# Controls by Design
 
-## Overview
+**Reusable design template | Adapt thresholds and evidence requirements to the process**
 
-Effective process engineering should improve efficiency without weakening control effectiveness. In enterprise environments, process changes must account for operational risk, ownership, compliance expectations, and decision traceability.
+Controls belong in the future-state workflow, with an accountable owner, a failure response and evidence that the control operated.
 
-This document outlines how controls and risk thinking can be integrated into process analysis and improvement planning.
+| Control | Type | Workflow behavior | Evidence / monitoring |
+|---|---|---|---|
+| Required intake fields | Preventive | Hold incomplete requests before downstream work | Validation outcome, missing fields and aging |
+| Approval separation | Preventive | Requester cannot approve their own restricted request | Identity and approval event; exception review |
+| Duplicate prevention | Preventive | Check a stable request key before creating another record | Duplicate disposition and linked original |
+| Source-to-output reconciliation | Detective | Compare expected records/values with processed outputs | Mismatches, assigned owner and resolution |
+| Aging / SLA trigger | Detective | Route overdue work to a named queue and escalate unresolved exceptions | Clock events, alert, acknowledgment and action |
+| Change audit trail | Detective / accountability | Capture who changed what, when and why | Before/after state, reviewer and retained history |
+| Controlled AI handoff | Preventive | Block missing or unusable evidence; route uncertainty to a reviewer | Readiness reason, reviewer decision and provenance |
 
-## Why Controls Matter
+## Design questions
 
-A process can be fast and still fail if it lacks:
+Who can submit, change, approve and override? What happens when the system is unavailable? How are failed automations retried without duplicate work? Which exception needs immediate escalation? What evidence proves the process remained controlled after a change?
 
-- clear ownership
-- required approvals
-- decision traceability
-- consistent handoffs
-- documented exceptions
-- visibility into breakdowns
+## Acceptance and sustainment
 
-Strong process design balances speed, usability, and control discipline.
+Test the normal path, incomplete inputs, duplicate requests, unauthorized approval, failed integration and overdue exceptions. The business/control owner approves the design and the technology owner confirms implementation. Define monitoring frequency, thresholds, remediation ownership and a change-review routine before scaling.
 
-## Common Process Risks
-
-Examples of process-related risks include:
-
-- unclear ownership across workflow stages
-- missed or inconsistent approvals
-- incomplete or poor-quality intake data
-- manual workarounds outside the intended process
-- delayed escalation of blocked items
-- limited visibility into bottlenecks
-- inconsistent execution across teams
-
-## Control Design Principles
-
-Strong control thinking in process engineering includes:
-
-1. defining who owns each major step
-2. clarifying required approvals and decision points
-3. reducing ambiguity in handoffs
-4. making status and exceptions visible
-5. capturing the minimum necessary information to support traceability
-6. designing controls that support execution rather than slow it unnecessarily
-
-## Examples of Useful Controls
-
-### 1. Ownership Controls
-Ensure each process stage has a clear owner or responsible team.
-
-**Why it matters**
-- improves accountability
-- reduces confusion
-- supports faster resolution of delays
-
-### 2. Intake Controls
-Require key information at the start of the process.
-
-**Why it matters**
-- improves data quality
-- reduces rework
-- supports better routing and prioritization
-
-### 3. Approval Controls
-Define where approval or review is required.
-
-**Why it matters**
-- protects decision quality
-- supports compliance expectations
-- reduces inconsistent execution
-
-### 4. Status and Exception Controls
-Make delays, blocked items, and exceptions visible.
-
-**Why it matters**
-- supports follow-up
-- improves transparency
-- reduces hidden process failure points
-
-### 5. Documentation and Traceability Controls
-Capture important decisions, changes, and outcomes.
-
-**Why it matters**
-- improves auditability
-- supports knowledge transfer
-- makes process outcomes easier to explain
-
-## Process Engineering Questions
-
-When evaluating a process, useful questions include:
-
-- Where is ownership unclear?
-- Which steps rely too heavily on manual follow-up?
-- Which decisions are not documented well?
-- Where are controls weak, duplicated, or overly burdensome?
-- Which parts of the process create the highest operational risk?
-- How can control effectiveness be improved without adding unnecessary friction?
-
-## Risk-Based Improvement Thinking
-
-Not every issue has the same impact. A practical process engineer should evaluate:
-
-- operational severity
-- frequency of occurrence
-- stakeholder impact
-- ease of detection
-- implementation effort
-- dependency on other teams or systems
-
-This helps prioritize the right improvement opportunities first.
-
-## Balance Principle
-
-The goal is not maximum control at every step. The goal is the right level of control for the risk, complexity, and business need involved.
-
-Well-designed processes should be:
-
-- controlled
-- understandable
-- scalable
-- practical to execute
-- measurable over time
-
-## Summary
-
-Controls and risk thinking strengthen process engineering by making improvements more sustainable, accountable, and reliable. Good process design does not treat controls as separate from workflow design—they are part of it.
+[CoE decision rights](coe-charter-and-governance.md) · [Workflow exception design](https://github.com/ddjfam/servicenow-workflow-automation/blob/main/end-to-end-workflow-example.md)

@@ -1,5 +1,7 @@
 # Process Overview
 
+**Portfolio method / illustrative guidance. Career outcomes are identified separately in the [repository overview](README.md).**
+
 ## Background
 
 Organizations depend on well-designed processes to deliver consistent outcomes, manage risk, and operate efficiently. When workflows become fragmented, overly manual, or unclear, teams experience delays, rework, inconsistent decisions, and reduced visibility into performance.

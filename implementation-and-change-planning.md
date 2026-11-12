@@ -1,5 +1,7 @@
 # Implementation and Change Planning
 
+**Portfolio method / illustrative guidance. Career outcomes are identified separately in the [repository overview](README.md).**
+
 ## Overview
 
 A good process design has limited value unless it can be implemented successfully. Process engineering should include practical planning for rollout, adoption, stakeholder alignment, and ongoing refinement.
